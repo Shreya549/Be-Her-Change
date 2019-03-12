@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="3_2)signin.css">
+        <script type="text/javascript">
+        function isValidpassword()
+        {
+            var re=/^[A-Z][a-zA-Z0-9]{7}/;
+            var s=document.getElementById("password").value;
+            if (!re.test(s))
+                alert("Password Length : 8 and first character should be a capital alphabet");
+            else
+                return true;
+        }
+        </script>
+    </head>
+    <body>
+        <center>
+        <form>
+            <table>
+                <tr>
+            <td><label for="username">Username:</label></td>
+            <td><input type="text" name="username" id="username" required></td></tr>
+            <br>
+            <tr><td><label for="password">Enter Password:</label></td>
+            <td><input type="password" name="password" id="password" required onBlur="isValidpassword();"></td></tr>
+            <br>
+            <tr>
+            <td><button formaction="6_1)Confessions.html"  class="button"> SUBMIT </button></td></tr>
+            </table>
+        </form>
+        </center>
+    </body>
+</html>

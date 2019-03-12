@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="6_2)Confessions.css">
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    </head>
+    <body>
+        <form id="confess-here">
+            <label for="Confess">
+                <h1>Say something..</h1>
+            </label>
+            
+                <input type="text" name="story" id="story" size="100">
+           
+            <button class="button" formaction="5_1)victimoptions.html"> SUBMIT </button>
+        </form>
+    </body>
+    <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyDLzdAU_y2t9oorEOO57ghx8ZQ4IqyDqcA",
+              authDomain: "women-techies.firebaseapp.com",
+              databaseURL: "https://women-techies.firebaseio.com",
+              projectId: "women-techies",
+              storageBucket: "women-techies.appspot.com",
+              messagingSenderId: "854807333718"
+            };
+            firebase.initializeApp(config);
+            const db=firebase.firestore();
+          </script>
+          <script src="6_3)Confessions.js"></script>
+</html>

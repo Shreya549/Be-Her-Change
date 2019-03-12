@@ -1,0 +1,32 @@
+form{
+    margin-top:80px;
+}
+body{
+    background-image: url("volunteer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.b1{
+        width: 100%;
+        background-color: ;
+        color: white;
+        padding: 12px 20px;
+        display:inline-block;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        font-family:Lucida Handwriting;
+        font-size:30px;
+        color:black;
+}
+h1{
+    width: 100%;
+    background-color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-family:Lucida Handwriting;
+    font-family:Lucida Handwriting;
+    font-size:30px;
+    color:black;
+}

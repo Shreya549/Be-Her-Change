@@ -1,0 +1,16 @@
+body{
+    background-image: url("volunteercpy.png");
+    background-size: cover;
+}
+button{
+    padding-left: 20%;
+}
+table{
+    margin-top: 20%;
+    font-size: 30px;
+    font-family: "Lucida Bright";
+}
+button{
+    margin-left: 50%;
+    text-align: center;
+}

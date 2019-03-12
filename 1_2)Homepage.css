@@ -1,0 +1,80 @@
+body{
+    background: url(bgfinal.jpg)
+}
+form{
+    padding-left: 80%;
+
+}
+img{
+    float: right;
+    margin-right: 30px;
+    margin-top: 9px;
+}
+.button5 {
+    width: 60%;
+    background-color:red ;
+    padding: 12px 20px;
+    display:inline-block;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-family:Lucida Handwriting;
+    font-size:30px;
+    }
+input#search{
+    background: url("escape.png")
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+}
+#text {
+    padding-left: 80%;
+    color: white;
+}
+h2{
+    padding-left: 60%;
+    font-size: 100px;
+    color: red;
+}
+.first {
+    width: 80%;
+    background-color:black ;
+    color: white;
+    padding: 12px 20px;
+    display:inline-block;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-family:Lucida Handwriting;
+    font-size:30px;
+    }
+.second {
+        width: 90%;
+        background-color:black ;
+        color: white;
+        padding: 12px 20px;
+        display:inline-block;
+        margin: 12px 5px;
+        border: none;
+        border-radius: 4px;
+        font-family:Lucida Handwriting;
+        font-size:30px;
+    }
+/*.button_firstpage{
+    height: 30px;
+    width:40px;
+    background-image: url("volunteer.png");
+    background-size:cover;
+    cursor: pointer;
+
+    
+    float: right;
+}
+.button_secondpage{
+    height: 30px;
+    width: 40px;
+    background-image: url("victimfinal.png")
+    background-size:cover;
+    cursor: pointer;
+
+}*/

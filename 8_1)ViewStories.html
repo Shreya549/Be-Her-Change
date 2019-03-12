@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="8_2)ViewStories.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.8_3)ViewStories.js"></script>
+    </head>
+    <body>
+        <h1>
+            <center>STORIES</center>
+        </h1>
+        <ul id="story-list"></ul>
+        <script>
+                // Initialize Firebase
+                var config = {
+                  apiKey: "AIzaSyDLzdAU_y2t9oorEOO57ghx8ZQ4IqyDqcA",
+                  authDomain: "women-techies.firebaseapp.com",
+                  databaseURL: "https://women-techies.firebaseio.com",
+                  projectId: "women-techies",
+                  storageBucket: "women-techies.appspot.com",
+                  messagingSenderId: "854807333718"
+                };
+                firebase.initializeApp(config);
+                const db=firebase.firestore();
+                db.settings({timestampsInSnapshots: true})
+              </script>
+              <script src="8_3)ViewStories.js"></script>
+    </body>
+</html>
