@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express()
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('./public'));
 
@@ -16,6 +19,26 @@ app.get('/home', function(req, res){
 
 app.get('/confess', function(req, res){
     res.sendFile(__dirname + '/public/6_1)Confessions.html');
+})
+
+app.get('/confess/submit', function(req,res){
+    var confess = req.body.story;
+    
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("BeHerChange");
+        var myobj = { story : confess , help : "" };
+        dbo.collection("Confessions").insertOne(myobj, function(err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+            db.close();
+        });
+    });
+
+    res.sendFile(__dirname + '/public/5_1)victimoptions.html');
 })
 
 app.get('/helpline', function(req, res){

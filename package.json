@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Shreya549/Be-Her-Change/issues"
   },
-  "homepage": "https://github.com/Shreya549/Be-Her-Change#readme"
+  "homepage": "https://github.com/Shreya549/Be-Her-Change#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
 }
