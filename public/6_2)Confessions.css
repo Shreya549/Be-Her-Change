@@ -1,0 +1,29 @@
+body{
+    background-color: white;
+}
+h1{
+    font-size: 50px;
+    background-color: white;
+    width: 500px;
+}
+.button{
+    margin-left: 45%;
+    color: black;
+    border: solid #1b641d 2px ;
+    font-size: 25px;
+    background-color: #4CAF50;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button:hover {
+    background-color: #008cba; /* Blue */
+    border: solid #04546e;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  }
+#story
+{
+    height:400px;
+    font-size:14pt;
+    border: solid green 5px;
+}

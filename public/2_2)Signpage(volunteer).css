@@ -1,0 +1,32 @@
+body{
+    background-image: url("vicfinal1.jpeg");    
+    background-size: cover;
+}
+h1{
+    
+    font-family: "Perpetua";
+    font-weight: bold;
+    font-size: 60px;
+}
+button{
+        width: 30%;
+        background-color: rgb(253, 237, 235);
+        color: white;
+        padding: 12px 20px;
+        display:inline-block;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        font-family:Lucida Handwriting;
+        font-size:30px;
+        color:black;
+}
+h2{
+    font-family: Lucida Handwriting;
+    font-size:30px;
+    color: black;
+}
+h3{
+    font-family:"Perpetua";
+    color:black;
+}

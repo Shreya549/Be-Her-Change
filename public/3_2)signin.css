@@ -1,0 +1,28 @@
+body{
+    background-image: url("https://wallpapershome.com/images/pages/ico_h/21242.jpg");
+    background-size: cover;
+}
+button{
+    padding-left: 20%;
+}
+table{
+    margin-top: 20%;
+    font-size: 30px;
+    font-family: "Lucida Bright";
+    
+}
+
+input
+{
+    padding: 10px;
+    
+}
+button{
+    margin-left: 50%;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    width: 50%;
+    font-weight: 900;
+    font-size: 20px;
+}

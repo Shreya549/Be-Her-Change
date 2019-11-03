@@ -1,0 +1,19 @@
+{
+  "name": "be-her-change",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shreya549/Be-Her-Change.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shreya549/Be-Her-Change/issues"
+  },
+  "homepage": "https://github.com/Shreya549/Be-Her-Change#readme"
+}
