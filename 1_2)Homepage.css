@@ -3,7 +3,6 @@ body{
 }
 form{
     padding-left: 80%;
-
 }
 img{
     float: right;
@@ -22,7 +21,7 @@ img{
     font-size:30px;
     }
 input#search{
-    background: url("escape.png")
+    background: url("escape.png");
     background-repeat: no-repeat;
     width: 45px;
     height: 45px;
@@ -38,28 +37,36 @@ h2{
 }
 .first {
     width: 80%;
-    background-color:black ;
+    background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     display:inline-block;
     margin: 10px 0;
-    border: none;
+    border: 2px solid black;
     border-radius: 4px;
-    font-family:Lucida Handwriting;
     font-size:30px;
     }
 .second {
         width: 90%;
-        background-color:black ;
         color: white;
         padding: 12px 20px;
         display:inline-block;
         margin: 12px 5px;
         border: none;
+        background-color: #2196F3;
         border-radius: 4px;
-        font-family:Lucida Handwriting;
         font-size:30px;
     }
+.first:hover{
+    border-color:#4CAF50;
+    color:rgb(43, 73, 43);
+}
+
+.second:hover{
+    
+  background-color: #2196F3;
+  color: rgb(20, 32, 44);
+}
 /*.button_firstpage{
     height: 30px;
     width:40px;
