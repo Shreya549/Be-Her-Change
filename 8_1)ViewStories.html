@@ -2,28 +2,51 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="8_2)ViewStories.css">
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.8_3)ViewStories.js"></script>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 20px 75px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: darkmagenta;
+          color: white;
+        }
+    </style>
     </head>
     <body>
-        <h1>
-            <center>STORIES</center>
-        </h1>
+        <div class="topnav">
+            <a href="1_1)Homepage.html">Home</a>
+            <a href="6_1)Confessions.html">Confess</a>
+            <a href="9_1)Helpline.html">Helpline</a>
+            <a href="7_1)Employement.html">Employment</a>
+            <a  class="active"href="8_1)ViewStories.html">View Stories</a>
+          </div>
+          <div style="padding-left:16px;">
+              <h1>
+                  <center>STORIES</center>
+              </h1>
+          </div> 
         <ul id="story-list"></ul>
-        <script>
-                // Initialize Firebase
-                var config = {
-                  apiKey: "AIzaSyDLzdAU_y2t9oorEOO57ghx8ZQ4IqyDqcA",
-                  authDomain: "women-techies.firebaseapp.com",
-                  databaseURL: "https://women-techies.firebaseio.com",
-                  projectId: "women-techies",
-                  storageBucket: "women-techies.appspot.com",
-                  messagingSenderId: "854807333718"
-                };
-                firebase.initializeApp(config);
-                const db=firebase.firestore();
-                db.settings({timestampsInSnapshots: true})
-              </script>
-              <script src="8_3)ViewStories.js"></script>
+        <script src="8_3)ViewStories.js"></script>
     </body>
 </html>
