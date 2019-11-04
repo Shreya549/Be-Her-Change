@@ -86,6 +86,31 @@ app.get('/signin', function(req, res){
     res.sendFile(__dirname + '/public/3_1)signin.html');
 })
 
+app.post('/sign_in', function(req, res){
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    var user = req.body.username;
+    var pass = req.body.password;
+    
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("BeHerChange");
+    var query = { username : user };
+    dbo.collection("Credentials").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+
+        if (pass == passorig)
+        res.sendFile(__dirname + '/public/6_1)Confessions.html');
+
+        else
+        res.sendFile(__dirname + '/public/3_1)signin.html');
+        db.close();
+    });
+    });
+})
+
 app.get('/signup', function(req, res){
     res.sendFile(__dirname + '/public/4_1)signup.html');
 })
@@ -108,13 +133,17 @@ app.post('/sign_up', function(req,res){
         "dob" : dob,
         "username" : username
     } 
-    db.collection('Credentials').insertOne(data,function(err, collection){ 
-            if (err) throw err; 
+     db.collection('Credentials').insertOne(data,function(err, collection){ 
+            if (err) {
+                throw err; 
+                res.sendFile(__dirname+"/public/4_1)Signup.html");
+            }
+            
             console.log("Record inserted Successfully"); 
+            res.sendFile(__dirname + '/public/3_1)signin.html');
                 
-        }); 
+         }); 
           
-    return res.redirect(__dirname + '/public/3_1)signin.html'); 
 }) 
 
 app.listen (8000, function(){
