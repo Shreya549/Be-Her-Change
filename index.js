@@ -21,8 +21,9 @@ app.get('/confess', function(req, res){
     res.sendFile(__dirname + '/public/6_1)Confessions.html');
 })
 
-app.get('/confess/submit', function(req,res){
+app.post('/confess/submit', function(req,res){
     var confess = req.body.story;
+    console.log(confess);
     
     var MongoClient = require('mongodb').MongoClient;
     var url = "mongodb://localhost:27017/";
@@ -50,6 +51,22 @@ app.get('/employment', function(req, res){
 })
 
 app.get('/view_stories', function(req, res){
+
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("BeHerChange");\
+        var i = 0;
+        dbo.collection("Confessions").find({}).toArray(function(err, result) {
+            if (err) throw err;
+            for (i in result)
+            console.log(result[i]['story']);
+            db.close();
+        });
+    });
+
     res.sendFile(__dirname + '/public/8_1)ViewStories.html');
 })
 
