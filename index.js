@@ -57,7 +57,7 @@ app.get('/view_stories', function(req, res){
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        var dbo = db.db("BeHerChange");\
+        var dbo = db.db("BeHerChange");
         var i = 0;
         dbo.collection("Confessions").find({}).toArray(function(err, result) {
             if (err) throw err;
