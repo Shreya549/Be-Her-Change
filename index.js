@@ -75,11 +75,13 @@ app.get('/view_stories', function(req, res){
             console.log(result[i]['story']);
             var count = result.length
             res.render('viewStories', {result: result, count: count})
+            console.log("HIII");
             db.close();
         });
     });
 
-//     res.sendFile(__dirname + '/public/8_1)ViewStories.html');
+    //res.render('viewStories');
+    //res.sendFile(__dirname + "/public/8_1)ViewStories.html");
 })
 
 app.get('/volunteer', function(req, res){
