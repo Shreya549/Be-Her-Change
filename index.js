@@ -80,8 +80,6 @@ app.get('/view_stories', function(req, res){
         });
     });
 
-    //res.render('viewStories');
-    //res.sendFile(__dirname + "/public/8_1)ViewStories.html");
 })
 
 app.get('/volunteer', function(req, res){
@@ -105,13 +103,18 @@ app.post('/sign_in', function(req, res){
     var query = { username : user };
     dbo.collection("Credentials").find(query).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        var passorig = result[0]["password"];
 
         if (pass == passorig)
-        res.sendFile(__dirname + '/public/6_1)Confessions.html');
+        {
+            console.log("User Verified");
+            res.redirect('/view_stories');
+        }
 
-        else
-        res.sendFile(__dirname + '/public/3_1)signin.html');
+        else{
+            console.log("Wrong User Id or Password");
+            res.redirect('/signin');
+        }
         db.close();
     });
     });
@@ -152,10 +155,6 @@ app.post('/sign_up', function(req,res){
          }); 
           
 }) 
-
-
-  
-
 
 app.listen (8000, function(){
     console.log("Server running on port : 8000");
