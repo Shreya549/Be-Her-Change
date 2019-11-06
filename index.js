@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express()
 var bodyParser = require('body-parser');
+var ejs = require('ejs');
 
 const mongoose = require('mongoose'); 
 mongoose.connect('mongodb://localhost:27017/BeHerChange'); 
@@ -73,7 +74,7 @@ app.get('/view_stories', function(req, res){
             for (i in result)
             console.log(result[i]['story']);
             var count = result.length
-            res.render('viewstories', {result: result, count: count})
+            res.render('viewStories', {result: result, count: count})
             db.close();
         });
     });
