@@ -13,6 +13,7 @@ db.once('open', function(callback){
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('./public'));
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/public/1_1)Homepage.html');
@@ -71,6 +72,7 @@ app.get('/view_stories', function(req, res){
             if (err) throw err;
             for (i in result)
             console.log(result[i]['story']);
+            res.render()
             db.close();
         });
     });
@@ -133,6 +135,7 @@ app.post('/sign_up', function(req,res){
         "dob" : dob,
         "username" : username
     } 
+
      db.collection('Credentials').insertOne(data,function(err, collection){ 
             if (err) {
                 throw err; 
@@ -145,6 +148,10 @@ app.post('/sign_up', function(req,res){
          }); 
           
 }) 
+
+
+  
+
 
 app.listen (8000, function(){
     console.log("Server running on port : 8000");
