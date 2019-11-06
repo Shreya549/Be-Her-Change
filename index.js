@@ -72,12 +72,13 @@ app.get('/view_stories', function(req, res){
             if (err) throw err;
             for (i in result)
             console.log(result[i]['story']);
-            res.render()
+            var count = result.length
+            res.render('viewstories', {result: result, count: count})
             db.close();
         });
     });
 
-    res.sendFile(__dirname + '/public/8_1)ViewStories.html');
+//     res.sendFile(__dirname + '/public/8_1)ViewStories.html');
 })
 
 app.get('/volunteer', function(req, res){
