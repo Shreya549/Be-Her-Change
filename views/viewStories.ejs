@@ -48,8 +48,8 @@
           </div>
          
         <ul id="story-list">
-          <% for(var i=0; i < <%= count %>; i++) { %>  
-            <li><%= result %></li>
+          <% for(var i=0; i < result.length; i++) { %>  
+            <li><%= result[i]['story'] %></li>
           <% } %>       
         </ul>
     </body>

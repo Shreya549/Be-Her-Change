@@ -73,9 +73,9 @@ app.get('/view_stories', function(req, res){
             if (err) throw err;
             for (i in result)
             console.log(result[i]['story']);
-            var count = result.length
+            var count = result.length;
             res.render('viewStories', {result: result, count: count})
-            console.log("HIII");
+            //console.log("HIII");
             db.close();
         });
     });
